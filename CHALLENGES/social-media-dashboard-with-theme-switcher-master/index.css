@@ -1,0 +1,231 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #20222F;
+  }
+  .all{
+    width: 80%;
+    margin: auto;
+  }
+  .attribution { 
+    font-size: 11px; text-align: center; 
+    }
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+    }
+  .body-toggle{
+    width: 40px;
+    height: 22px;
+    background: -webkit-radial-gradient(top right, hsl(125, 82%, 56%),hsl(246, 100%, 56%));
+    border-radius: 20px;
+    padding: 2px;
+  }
+  .body-toggle > .toggle{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    transition: 0.4s;
+    background: #20222F;
+  }
+  .body-toggle.active{
+    background: -webkit-radial-gradient(top right, hsl(125, 82%, 56%),hsl(246, 100%, 56%));
+  }
+  .body-toggle.active > .toggle{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin-left: 18px;
+    background-color: rgb(233, 223, 223);
+  }
+  .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .top .top-left{
+    display: inline-block;
+  }
+  .top .top-left h2{
+    display: block;
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.616);
+  }
+  .top .top-left h5{
+    display: inline-block;
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.616);
+    font-size: 10px;
+  }
+
+  .toggle-container{
+    display: flex;
+  }
+  .toggle-container>h5{
+    color: rgba(255, 255, 255, 0.616);
+  }
+  .toggle-container .body-toggle{
+    margin-top: 1.13em;
+    margin-left: 10px;
+  }
+  .top-lane{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .item-top{
+    background-color: #252B43;
+    width: 23%;
+    border-radius: 5px 5px 10px 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .item-top-first{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .item-top-first>p{
+    display: inline-block;
+    color: #6e79a7;
+    margin: 3px 10px 0 5px;
+    font-weight: 700;
+  }
+  .item-top-first>img{
+    width: 23px;
+    height: 22px;
+  }
+
+  .yt-h4-cl{
+    color:hsl(348, 73%, 54%);
+  }
+  .fb-h4-cl{
+    color:  hsl(163, 72%, 41%);
+  }
+  .it-h4-cl{
+    color:  hsl(163, 72%, 41%);
+  }
+  .tw-h4-cl{
+    color:  hsl(163, 72%, 41%);
+  }
+  .top-lane h1{
+    color: #fff;
+    font-size: 60px;
+    margin: auto;
+  }
+  .lane{
+    width: 100%;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+  }
+  .br-yt{
+    background-color: hsl(348, 97%, 39%) ;
+  }
+  .br-it{      
+    background: -webkit-radial-gradient(bottom left,hsl(37, 97%, 70%), hsl(329, 70%, 58%));     
+  }
+  .br-tw{
+    background: hsl(203, 89%, 53%);
+  }
+  .br-fb{
+    background: hsl(208, 89%, 53%);
+  }
+  .effect{
+    color:rgba(255, 255, 255, 0.342);
+    font-size: 13px;
+    font-weight: 100;
+  }
+
+  .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .item-bot{
+    width: 23%;
+    background: #252B43;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .item-bot:hover{
+    background: #333A56;
+  }
+  .item-top:hover{
+    background: #333A56;
+  }
+  .bot-item-bot{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    text-align: end;
+    width: 85%;
+    margin: 10px auto;
+  }
+  .bot-item-top{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 85%;
+    margin: 10px auto;
+
+  }
+  .bot-item-top p{
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.616);
+    padding: 5px 10px ;
+
+  }
+  .bot-item-top img{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+   }
+  .bot-item-bot h1{
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px ;
+  }
+  .bot-item-bot h5{
+    margin-top: 45px;
+  } 
+  .p-gr{
+    color:  hsl(163, 72%, 41%);
+  }
+  .p-red{
+    color: hsl(348, 73%, 54%);
+  }
+  #h1-mid{
+    color: white;
+    font-size: 26px;
+  }
+  
+@media only screen and (max-width: 950px) {
+  .item-top{
+    width: 45%;
+  }
+  .item-bot{
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .item-top{
+    width: 95%;
+  }
+  .item-bot{
+    width: 95%;
+  }
+  .top{
+      display: block;
+    justify-content:none;
+  }
+  .toggle-container{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+  }
+  .toggle-container>h5{
+    display: inline-block;
+  }
+
+}

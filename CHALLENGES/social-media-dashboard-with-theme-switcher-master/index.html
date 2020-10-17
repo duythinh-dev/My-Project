@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="all">
+  <div class="top">
+    <div class="top-left">
+      <h2 id="h2-1">
+        Social Media Dashboard
+      </h2>
+      <h5 class="h5-1">
+        Total Followers: 23,004
+      </h5>
+    </div>
+    <div class="toggle-container">
+      <h5 class="h5-1">
+        Dark Mode
+      </h5>
+      <div class="body-toggle" id="body-lg" onclick="modedol()">
+        <div class="toggle"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="top-lane">
+    <div class="item-top" id="itemTop1">
+      <div class="lane br-fb"></div>
+      <div class="item">
+        <div class="item-top-first">
+          <img src="./images/icon-facebook.svg" alt="">
+          <p class="p-top">@nathanf</p>
+        </div>
+        <h1 class="h1-top">1987</h1>
+        <p class="effect">F O L L O W E R S</p>
+        <h4 class="fb-h4-cl"><i class="fa fa-caret-up"></i>
+          12 today</h4>
+      </div>
+    </div>
+    <div class="item-top" id="itemTop2">
+      <div class="lane br-tw"></div>
+      <div class="item" m>
+        <div class="item-top-first">
+          <img src="./images/icon-twitter.svg" alt="">
+          <p class="p-top">@nathanf</p>
+        </div>
+        <h1 class="h1-top">1044</h1>
+        <p class="effect">F O L L O W E R S</p>
+        <h4 class="tw-h4-cl"><i class="fa fa-caret-up"></i>99 Today</h4>
+      </div>
+    </div>
+    <div class="item-top" id="itemTop3" >
+      <div class="lane br-it"></div>
+      <div class="item">
+        <div class="item-top-first">
+          <img src="./images/icon-instagram.svg" alt="">
+          <p class="p-top">@realnathanf</p>
+        </div>
+        <h1 class="h1-top">11k</h1>
+        <p class="effect">F O L L O W E R S</p>
+        <h4 class="it-h4-cl"><i class="fa fa-caret-up"></i> 1099 Today
+        </h4>
+      </div>
+    </div><div class="item-top" id="itemTop4">
+      <div class="lane br-yt"></div>
+      <div class="item">
+        <div class="item-top-first">
+          <img src="./images/icon-youtube.svg" alt="">
+          <p class="p-top">Nathan F.</p>
+        </div>
+        <h1 class="h1-top">8239</h1>
+        <p class="effect">S U B S C R I B E R S</p>
+        <h4 class="yt-h4-cl"><i class="fa fa-caret-down"></i>
+          144 today</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <h1 id="h1-mid">  Overview - Today  </h1>
+
+  <!-- bottom -->
+  <div class="bottom">
+    <div class="item-bot" id="itemBot1">
+      <div class="bot-item-top">
+        <p class="p-bot">Page Views</p>
+        <img src="./images/icon-facebook.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">87</h1>
+        <h5 class="p-gr"><i class="fa fa-caret-up"></i>3%</h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot2">
+      <div class="bot-item-top">
+        <p class="p-bot">Likes</p>
+        <img src="./images/icon-facebook.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">52</h1>
+        <h5 class="p-red"><i class="fa fa-caret-down"></i>2%</h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot3">
+      <div class="bot-item-top">
+        <p class="p-bot">Likes</p>
+        <img src="./images/icon-instagram.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">5462</h1>
+        <h5 class="p-gr"><i class="fa fa-caret-up"></i>2257% </h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot4">
+      <div class="bot-item-top">
+        <p class="p-bot">Profile Views</p>
+        <img src="./images/icon-instagram.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">52k</h1>
+        <h5 class="p-gr"><i class="fa fa-caret-up"></i>1375%</h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot5">
+      <div class="bot-item-top">
+        <p class="p-bot">Retweets</p>
+        <img src="./images/icon-twitter.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">117</h1>
+        <h5 class="p-gr"><i class="fa fa-caret-up"></i>303% </h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot6">
+      <div class="bot-item-top">
+        <p class="p-bot">Likes</p>
+        <img src="./images/icon-twitter.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">507</h1>
+        <h5 class="p-gr"><i class="fa fa-caret-up"></i>553% </h5>
+      </div>
+    </div>
+    <div class="item-bot" id="itemBot7">
+      <div class="bot-item-top">
+        <p class="p-bot">Likes</p>
+        <img src="./images/icon-youtube.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">107</h1>
+        <h5 class="p-red"><i class="fa fa-caret-down"></i>19%</h5>
+      </div>
+    </div>
+    
+    <div class="item-bot" id="itemBot8">
+      <div class="bot-item-top">
+        <p class="p-bot">Total Views</p>
+        <img src="./images/icon-youtube.svg" alt="">
+      </div>
+      <div class="bot-item-bot">
+        <h1 class="h1-bot">1407</h1>
+        <h5 class="p-red"><i class="fa fa-caret-down"></i>12% </h5>
+      </div>
+    </div>                    
+  </div>
+</div>
+<i class="fa fa-caret-up"></i>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Dang Duy Thinh</a>.
+</div> 
+
+  <script>
+    var x = 1;
+    function modedol(){
+      var br = document.getElementById("body-lg");
+      var bodyBr = document.getElementsByTagName('BODY')[0];
+      var h21 = document.getElementById('h2-1');
+      var bdToggle = document.getElementById('body-lg');
+      
+      
+      br.classList.toggle('active');   
+      if (x % 2 == 1) {
+        bodyBr.style.backgroundColor = "#fff";
+        bodyBr.style.transition = "0.4s";
+
+        h21.style.color = "black";
+
+        for (let index = 0; index < 2; index++) {
+          document.getElementsByClassName('h5-1')[index].style.color = "#AEB2CD";
+        }
+     
+
+        bdToggle.style.background= "#AEB2CD";
+
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('item-top')[index].style.background = "#F0F3FA";
+          document.getElementsByClassName('item-top')[index].addEventListener("mousemove",function onHover(){
+            var element = document.getElementsByClassName('item-top')[index];
+                element.style.background = "#E1E3F0";
+          });
+          document.getElementsByClassName('item-top')[index].addEventListener("mouseout",function onHover(){
+            var element = document.getElementsByClassName('item-top')[index];
+                element.style.background = "#F0F3FA";
+          });
+        }
+
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('h1-top')[index].style.color = "black";
+          
+        }
+
+        document.getElementById('h1-mid').style.color = "#ADB3BF";
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('item-bot')[index].style.background = "#F0F3FA";
+          document.getElementsByClassName('item-bot')[index].addEventListener("mousemove",function onHover(){
+            var element = document.getElementsByClassName('item-bot')[index];
+                element.style.background = "#E1E3F0";
+          });
+          document.getElementsByClassName('item-bot')[index].addEventListener("mouseout",function onHover(){
+            var element = document.getElementsByClassName('item-bot')[index];
+                element.style.background = "#F0F3FA";
+          });
+        }
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('p-bot')[index].style.color = "#AEB2CD";
+        }
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('h1-bot')[index].style.color = "black";
+        }
+              
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('effect')[index].style.color = "#333A56";
+          
+        }
+
+      }
+      else{
+        bodyBr.style.backgroundColor = "#20222F";
+        h21.style.color = "rgb(233, 223, 223)";
+
+        for (let index = 0; index < 2; index++) {
+          document.getElementsByClassName('h5-1')[index].style.color = "rgba(255, 255, 255, 0.616)";
+          
+        }
+
+        bdToggle.style.background= "-webkit-radial-gradient(top right, hsl(125, 82%, 56%),hsl(246, 100%, 56%))";
+
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('item-top')[index].style.background = "#272844";
+          document.getElementsByClassName('item-top')[index].addEventListener("mousemove",function onHover(){
+            var element = document.getElementsByClassName('item-top')[index];
+                element.style.background = "#333A56";
+          });
+          document.getElementsByClassName('item-top')[index].addEventListener("mouseout",function onHover(){
+            var element = document.getElementsByClassName('item-top')[index];
+                element.style.background = "#252B43";
+          });
+          
+        }
+
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('h1-top')[index].style.color = "white";
+          
+        }
+               document.getElementById('h1-mid').style.color = "white";
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('item-bot')[index].style.background = "#272844";
+          document.getElementsByClassName('item-bot')[index].addEventListener("mousemove",function onHover(){
+            var element = document.getElementsByClassName('item-bot')[index];
+                element.style.background = "#333A56";
+          });
+          document.getElementsByClassName('item-bot')[index].addEventListener("mouseout",function onHover(){
+            var element = document.getElementsByClassName('item-bot')[index];
+                element.style.background = "#252B43";
+          });
+        }
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('p-bot')[index].style.color = "#AEB2CD";
+        }
+
+        for (let index = 0; index < 8; index++) {
+          document.getElementsByClassName('h1-bot')[index].style.color = "white";
+        }
+              
+        for (let index = 0; index < 4; index++) {
+          document.getElementsByClassName('effect')[index].style.color = "rgba(255, 255, 255, 0.342)";
+          
+        }
+        
+      }
+      x = x+1;
+    }
+
+  </script>
+</body> 
+</html>
