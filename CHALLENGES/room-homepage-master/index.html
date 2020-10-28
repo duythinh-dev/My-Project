@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Room homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top">
+    <div class="top-left">
+      <div class="menu">
+        <ul>
+          <li>room</li>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="list-img">
+        <div class="img">
+          <img src="./images/desktop-image-hero-1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="./images/desktop-image-hero-2.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="./images/desktop-image-hero-3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="top-right">
+      <div class="text">
+        <div class="change">
+          <h1>  Discover innovative ways to decorate
+          </h1>
+          <p class="long-text">We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your 
+            own style with our collection and make your property a reflection of you and what you love.</p>
+        </div> 
+        <div class="change">
+          <h1>  We are available all across the globe
+          </h1>
+          <p class="long-text">With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+            store locator. Any questions? Don't hesitate to contact us today.</p>
+        </div> 
+        <div class="change">
+          <h1>  Manufactured with the best materials
+          </h1>
+          <p class="long-text">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+            experience in this industry, we understand what customers want for their home and office.</p>
+        </div> 
+        <p class="shop-text">SHOP NOW    <i class="fa fa-long-arrow-right"></i>
+        </p>
+      </div>
+      <div class="button">
+        <div class="back" onclick="nextSlide(-1)" ><p><</p></div>
+        <div class="next" onclick="nextSlide(1)" ><p>></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="num1">
+      <img src="./images/image-about-dark.jpg" alt="">
+    </div>
+    <div class="num2">
+      <h4>ABOUT OUR FYRNITURE</h4>
+      <p> Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </div>
+    <div class="num3">
+      <img src="./images/image-about-light.jpg" alt="">
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script>
+    var item = 1;
+    slideShow(item);
+
+    function nextSlide(n){
+      slideShow(item+=n);
+    }
+    
+    function slideShow(n){
+      var x;
+      var slideImg = document.getElementsByClassName('img');
+      var slideText = document.getElementsByClassName('change');
+
+      var imgLeg = slideImg.length
+
+      if (n > imgLeg) {
+        item = 1;
+      }
+      if (n < 1) {
+        item = imgLeg;
+      }
+      for (let index = 0; index < imgLeg; index++) {
+        slideImg[index].style.display = "none";        
+        slideText[index].style.display = "none";        
+      }
+      slideImg[item-1].style.display = "block";
+      slideText[item-1].style.display = "block";
+    }
+  </script>
+</body>
+</html>
