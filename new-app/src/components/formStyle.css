@@ -1,5 +1,5 @@
 
-/* .canhBao::after{
-    content:"*";
-    color: red;
-} */
+.canhBao{
+    display: flex;
+    justify-content: flex-end;
+}

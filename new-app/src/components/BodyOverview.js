@@ -16,7 +16,6 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import img1 from "../img/2.jpg";
 import img2 from "../img/6.jpg";
 import img3 from "../img/7.jpg";
-import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
@@ -152,11 +151,11 @@ function BodyOverview() {
                   }
                 />
                 <ListItemIcon>
-
-                    <MoreHorizIcon  aria-controls="fade-menu"
+                  <MoreHorizIcon
+                    aria-controls="fade-menu"
                     aria-haspopup="true"
-                    onClick={handleClick}/>
-
+                    onClick={handleClick}
+                  />
                 </ListItemIcon>
                 <Menu
                   id="fade-menu"
