@@ -46,7 +46,7 @@ function App() {
                 <Switch>
                   <Route path="/" exact component={BodyOverview} />
                   <Route path="/bodywork" component={BodyWork} />
-                  <Route path="/bodyliving" component={BodyOverview} />
+                  <Route path="/bodyliving" component={BodyLiving} />
                   <Route path="/bodyinfor" component={BodyOverview} />
                   <Route path="/bodyrespect" component={BodyOverview} />
                   <Route path="/bodydetail" component={BodyOverview} />

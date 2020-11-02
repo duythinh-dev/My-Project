@@ -18,6 +18,7 @@ import React, { useState } from "react";
 import formStyle from "./formStyle.css";
 import PublicIcon from "@material-ui/icons/Public";
 import AddIcon from "@material-ui/icons/Add";
+import SaveIcon from "@material-ui/icons/Save";
 
 const dataForm = [
   {
@@ -87,7 +88,7 @@ const useStyle = makeStyles((theme) => ({
     "& .MuiInputBase-root,.MuiFormControlLabel-root": {
       height: "30px",
     },
-    "& .MuiGrid-grid-xs-7": {
+    "& .MuiGrid-grid-lg-7": {
       marginTop: "10px",
     },
     "& .MuiInput-underline": {
@@ -121,7 +122,7 @@ function FormHocVan() {
         <div
           className={(classes.style2, classes.background1)}
           onClick={showForm}
-          style={{ display: close }}
+          style={{ display: close, cursor: "pointer" }}
         >
           <ListItem>
             <AddIcon className={classes.background1} />
@@ -134,24 +135,24 @@ function FormHocVan() {
         <form className={classes.root} style={{ display: opens }}>
           <Grid container>
             {dataForm.map((item, ix) => (
-              <Grid style={{ display: "flex" }} key={(() => `${ix}`)()} xs={12}>
-                <Grid item xs={5}>
+              <Grid style={{ display: "flex" }} key={(() => `${ix}`)()} lg={12}>
+                <Grid item lg={5}>
                   <ListItem>
                     <ListItemText primary={item.primary} className="canhBao" />
                   </ListItem>
                 </Grid>
-                <Grid item xs={7}>
+                <Grid item lg={7}>
                   <OutlinedInput placeholder={item.label}></OutlinedInput>
                 </Grid>
               </Grid>
             ))}
-            <Grid style={{ display: "flex" }} xs={12}>
-              <Grid item xs={5}>
+            <Grid style={{ display: "flex" }} lg={12}>
+              <Grid item lg={5}>
                 <ListItem>
                   <ListItemText primary="Mô tả" className="canhBao" />
                 </ListItem>
               </Grid>
-              <Grid item xs={7}>
+              <Grid item lg={7}>
                 <TextareaAutosize
                   placeholder="Mô tả về công việc"
                   className="textAutosize"
@@ -164,8 +165,8 @@ function FormHocVan() {
                 ></TextareaAutosize>
               </Grid>
             </Grid>
-            <Grid style={{ display: "flex" }} xs={12}>
-              <Grid item xs={5}>
+            <Grid style={{ display: "flex" }} lg={12}>
+              <Grid item lg={5}>
                 <ListItem>
                   <ListItemText
                     primary="Khoảng thời gian"
@@ -173,11 +174,13 @@ function FormHocVan() {
                   />
                 </ListItem>
               </Grid>
-              <Grid item xs={7}>
+              <Grid item lg={7}>
                 {dataSelect2.map((item, ix) => (
                   <Select
                     key={(() => `${ix}`)()}
                     defaultValue={item.defaultValue}
+                    style={{ maxWidth: "30%", height: 50 }}
+                    variant="outlined"
                   >
                     <MenuItem value={item.value1}>{item.text1}</MenuItem>
                     <MenuItem value={item.value2}>{item.text2}</MenuItem>
@@ -185,21 +188,23 @@ function FormHocVan() {
                 ))}
               </Grid>
             </Grid>
-            <Grid style={{ display: "flex" }} xs={12}>
-              <Grid item xs={5}></Grid>
-              <Grid item xs={7}>
+            <Grid style={{ display: "flex" }} lg={12}>
+              <Grid item lg={5}></Grid>
+              <Grid item lg={7}>
                 <ListItem>
                   <Typography>Đến</Typography>
                 </ListItem>
               </Grid>
             </Grid>
-            <Grid style={{ display: "flex" }} xs={12}>
-              <Grid item xs={5}></Grid>
-              <Grid item xs={7}>
+            <Grid style={{ display: "flex" }} lg={12}>
+              <Grid item lg={5}></Grid>
+              <Grid item lg={7}>
                 {dataSelect.map((item, ix) => (
                   <Select
                     key={(() => `${ix}`)()}
                     defaultValue={item.defaultValue}
+                    style={{ maxWidth: "30%", height: 50 }}
+                    variant="outlined"
                   >
                     <MenuItem value={item.value1}>{item.text1}</MenuItem>
                     <MenuItem value={item.value2}>{item.text2}</MenuItem>
@@ -208,9 +213,9 @@ function FormHocVan() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid style={{ display: "flex" }} xs={12}>
-            <Grid item xs={5}></Grid>
-            <Grid item xs={7}>
+          <Grid style={{ display: "flex" }} lg={12}>
+            <Grid item lg={5}></Grid>
+            <Grid item lg={7}>
               <FormControlLabel
                 control={<Checkbox color="primary" />}
                 label="Đã tốt nghiệp"
@@ -219,13 +224,10 @@ function FormHocVan() {
           </Grid>
           <Divider />
           <Grid container>
-            <Grid item xs={12} className={classes.containers}>
+            <Grid item lg={12} className={classes.containers}>
               <Select
-                style={{
-                  minWidth: "170px",
-                  display: "inline-block",
-                  width: "auto",
-                }}
+                variant="outlined"
+                style={{ minWidth: 180, maxWidth: 200 }}
               >
                 <MenuItem value={1}>
                   <PublicIcon />
@@ -270,11 +272,19 @@ function FormHocVan() {
                   </ListItemText>
                 </MenuItem>
               </Select>
-
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<SaveIcon />}
+                style={{ marginRight: 10, marginBottom: 10 }}
+              >
                 Lưu
               </Button>
-              <Button variant="contained" onClick={closeForm}>
+              <Button
+                variant="contained"
+                onClick={closeForm}
+                style={{ marginRight: 10, marginBottom: 10 }}
+              >
                 Hủy
               </Button>
             </Grid>

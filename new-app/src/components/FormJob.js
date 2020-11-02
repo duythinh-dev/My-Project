@@ -16,9 +16,8 @@ import {
 } from "@material-ui/core";
 import React, { useState } from "react";
 import formStyle from "./formStyle.css";
-import PublicIcon from "@material-ui/icons/Public";
 import AddIcon from "@material-ui/icons/Add";
-
+import SelectCongKhai from "./SelectCongKhai";
 const dataForm = [
   {
     primary: "Công ty",
@@ -127,7 +126,7 @@ function Form() {
         <div
           className={(classes.style2, classes.background1)}
           onClick={showForm}
-          style={{ display: close }}
+          style={{ display: close, cursor: "pointer" }}
         >
           <ListItem>
             <AddIcon className={classes.background1} />
@@ -193,6 +192,8 @@ function Form() {
                   <Select
                     key={(() => `${ix}`)()}
                     defaultValue={item.defaultValue}
+                    style={{ maxWidth: "30%", height: 50 }}
+                    variant="outlined"
                   >
                     <MenuItem value={item.value1}>{item.text1}</MenuItem>
                     <MenuItem value={item.value2}>{item.text2}</MenuItem>
@@ -215,6 +216,8 @@ function Form() {
                   <Select
                     key={(() => `${ix}`)()}
                     defaultValue={item.defaultValue}
+                    style={{ maxWidth: "30%", height: 50 }}
+                    variant="outlined"
                   >
                     <MenuItem value={item.value1}>{item.text1}</MenuItem>
                     <MenuItem value={item.value2}>{item.text2}</MenuItem>
@@ -226,61 +229,19 @@ function Form() {
           <Divider />
           <Grid container>
             <Grid item xs={12} className={classes.containers}>
-              <Select
-                style={{
-                  minWidth: "170px",
-                  display: "inline-block",
-                  width: "auto",
-                }}
+              <SelectCongKhai />
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ marginRight: 10, marginBottom: 10 }}
               >
-                <MenuItem value={1}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Công khai
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={2}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Bạn của bạn bè
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={3}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Bạn bè
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={4}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Bạn bè ngoại trừ
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={5}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Bạn bè cụ thể
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={6}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Chỉ mình tôi
-                  </ListItemText>
-                </MenuItem>
-                <MenuItem value={7}>
-                  <PublicIcon />
-                  <ListItemText style={{ display: "inline-block" }}>
-                    Tùy chỉnh
-                  </ListItemText>
-                </MenuItem>
-              </Select>
-
-              <Button variant="contained" color="primary">
                 Lưu
               </Button>
-              <Button variant="contained" onClick={closeForm}>
+              <Button
+                variant="contained"
+                onClick={closeForm}
+                style={{ marginRight: 10, marginBottom: 10 }}
+              >
                 Hủy
               </Button>
             </Grid>
